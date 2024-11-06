@@ -13,7 +13,7 @@ export default function ComentarioStats() {
   return (
     <div className='feedback-stats'>
       <h4>Comentarios: {totalComentarios}</h4>
-      <h4>Calificación promedio: {promedio.toFixed(2)}</h4>
+      <h4>Calificación promedio: {promedio}</h4>
     </div>
   );
 }

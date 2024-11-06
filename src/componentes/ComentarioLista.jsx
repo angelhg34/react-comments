@@ -31,6 +31,7 @@ const ComentarioLista = () => {
                             <ComentarioItem 
                             key={comentario.id}
                             comentario={comentario.comentario}
+                            calificacion={comentario.calificacion}
                             />
                         </motion.div>
                     )
