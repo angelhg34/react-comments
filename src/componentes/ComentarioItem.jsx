@@ -1,7 +1,8 @@
 import {React, useContext, useState} from 'react'
 import Card from './Card'
 import { FaTimes } from "react-icons/fa";
-export const ComentarioItem = ({comentario, calificacion}) => {
+import ComentariosContexto from '../contexto/comentariosContexto';
+export const ComentarioItem = ({comentario, calificacion, id}) => {
 
     //manejo del estado de un comentario:
     //comentario y calificacion como atributo
@@ -9,6 +10,9 @@ export const ComentarioItem = ({comentario, calificacion}) => {
     const [comment, setComentario] = useState(comentario.comentario)
     const [rating, setRating] = useState(comentario.calificacion)
     const[identificacion,setIde]=useState(comentario.id)
+    
+    //traer del contexto borrarItem
+    const {borrarItem}=useContext(ComentariosContexto)
 
 
 
@@ -16,7 +20,7 @@ export const ComentarioItem = ({comentario, calificacion}) => {
     <Card reverse={true}>
       <div className='num-display'>{calificacion}</div>
       <div className='text-display'>{ comentario }</div>
-      <button className='close'>
+      <button className='close' onClick={()=>{borrarItem(id)}}>
         <FaTimes color='purple' />
       </button>
     </Card>

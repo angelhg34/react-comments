@@ -6,14 +6,14 @@ import ComentariosContexto from '../contexto/comentariosContexto'
 
 const ComentarioLista = () => {
 
-    const {comments} = useContext(ComentariosContexto)
+    const {comments,isLoading} = useContext(ComentariosContexto)
     console.log(comments)
 
-    if(comments.length===0 || !comments){
+    if(!isLoading && comments.length===0 || !comments){
         return <p>No hay comentarios</p>
     }
     else{
-        return (
+        return isLoading? (<h2>Cargando...</h2>): (
             <AnimatePresence>
                             <div className='comments'>
             <ul>
@@ -29,7 +29,7 @@ const ComentarioLista = () => {
                             whileTap={{scale:0.8}}
                         >
                             <ComentarioItem 
-                            key={comentario.id}
+                            id={comentario.id}
                             comentario={comentario.comentario}
                             calificacion={comentario.calificacion}
                             />

@@ -1,13 +1,8 @@
 {
   "Comentario": [
     {
-      "id": "1",
-      "comentario": "hello world",
-      "calificacion": 1
-    },
-    {
       "id": "2",
-      "comentario": "Lorem ipsum dolor sit amet.",
+      "comentario": "holaa mundooo",
       "calificacion": 7
     },
     {
@@ -19,6 +14,21 @@
       "id": "4",
       "comentario": "Lorem ipsum dolor sit amet.",
       "calificacion": 10
+    },
+    {
+      "id": "26ce",
+      "comentario": "probando react",
+      "calificacion": 3
+    },
+    {
+      "id": "269b",
+      "comentario": "nuevo comentariooo :))",
+      "calificacion": 3
+    },
+    {
+      "id": "2b72",
+      "comentario": "holaaaaaaaaaaaaaaa",
+      "calificacion": 0
     }
   ]
 }
